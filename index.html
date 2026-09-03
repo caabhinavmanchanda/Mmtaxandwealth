@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M&amp;M Tax and Wealth Advisors | CA Manisha Mittal, Gurgaon</title>
+<meta name="description" content="GST, income tax, wealth management, corporate compliance and NRI taxation advisory led by CA Manisha Mittal in Gurgaon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#FEFEFC;
+    --bg-mint:#EEF1F6;
+    --ink:#1B2130;
+    --ink-soft:#586071;
+    --primary:#16233B;
+    --primary-dark:#0D1626;
+    --accent:#8A1F3B;
+    --accent-soft:#F4E4E8;
+    --line:#E2DFD6;
+    --white:#FFFFFF;
+    --serif:'Fraunces', serif;
+    --sans:'IBM Plex Sans', sans-serif;
+    --maxw:1120px;
+    --wa:#25D366;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+  section{ padding:96px 0; }
+  h1,h2,h3{ font-family:var(--serif); font-weight:600; margin:0; color:var(--primary-dark); }
+  p{ margin:0; }
+  .eyebrow{ font-family:var(--sans); font-size:14px; color:var(--accent); font-weight:500; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation:none !important; transition:none !important; }
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,251,246,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--maxw); margin:0 auto; padding:18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .brand-mark{ width:44px; height:44px; flex:none; object-fit:contain; border-radius:50%; }
+  .brand-name{ font-family:var(--serif); font-size:19px; color:var(--primary-dark); line-height:1.15; }
+  .brand-name small{ display:block; font-family:var(--sans); font-size:11.5px; color:var(--ink-soft); font-weight:500; letter-spacing:.02em; }
+  nav.links{ display:flex; align-items:center; gap:32px; }
+  nav.links a{ text-decoration:none; font-size:15px; color:var(--ink); font-weight:500; }
+  nav.links a:hover{ color:var(--primary); }
+  .nav-call{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--primary); color:var(--white); text-decoration:none;
+    padding:10px 20px; border-radius:2px; font-size:14.5px; font-weight:500;
+  }
+  .nav-call:hover{ background:var(--primary-dark); }
+  .menu-toggle{ display:none; }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding:88px 0 0; overflow:hidden; }
+  .hero .wrap{ display:grid; grid-template-columns:1.05fr .95fr; gap:64px; align-items:center; }
+  .hero-copy h1{ font-size:52px; line-height:1.08; letter-spacing:-.01em; }
+  .hero-copy .lede{ margin-top:24px; font-size:18px; color:var(--ink-soft); max-width:46ch; }
+  .hero-actions{ margin-top:36px; display:flex; gap:16px; flex-wrap:wrap; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; padding:14px 26px; font-size:15px; font-weight:500; border-radius:2px; border:1px solid transparent; }
+  .btn-primary{ background:var(--primary); color:var(--white); }
+  .btn-primary:hover{ background:var(--primary-dark); }
+  .btn-ghost{ border-color:var(--ink); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--primary); color:var(--primary); }
+
+  .hero-figure{ position:relative; }
+  .hero-photo-frame{
+    position:relative; aspect-ratio:4/5; border-radius:2px;
+    background:var(--primary);
+    overflow:hidden;
+  }
+  .hero-photo-frame img{ width:100%; height:100%; object-fit:cover; }
+  .photo-placeholder{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
+    background:linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color:var(--accent-soft);
+  }
+  .photo-placeholder .medallion{
+    width:118px; height:118px; border-radius:50%; border:1.5px solid var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:38px; color:var(--white);
+  }
+  .photo-placeholder span.cap{ font-size:13px; letter-spacing:.02em; color:var(--accent-soft); text-align:center; padding:0 30px; }
+  .hero-quote{
+    position:absolute; left:-30px; bottom:-30px; max-width:290px;
+    background:var(--accent-soft); padding:24px 26px; border-radius:2px;
+    font-family:var(--serif); font-style:italic; font-size:17px; color:var(--primary-dark); line-height:1.45;
+    box-shadow:0 18px 40px -20px rgba(8,46,34,.35);
+  }
+  .hero-quote cite{ display:block; margin-top:12px; font-style:normal; font-family:var(--sans); font-size:12.5px; color:var(--ink-soft); }
+
+  /* ---------- Credentials strip ---------- */
+  .strip{ background:var(--primary-dark); color:var(--accent-soft); }
+  .strip .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .strip-item{ padding:34px 28px; border-left:1px solid rgba(241,230,204,.18); }
+  .strip-item:first-child{ border-left:none; padding-left:0; }
+  .strip-item .num{ font-family:var(--serif); font-size:26px; color:var(--white); }
+  .strip-item .lbl{ margin-top:6px; font-size:13.5px; color:var(--accent-soft); line-height:1.4; }
+
+  /* ---------- About ---------- */
+  .about .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:72px; }
+  .about h2{ font-size:34px; margin-bottom:26px; }
+  .about .bio p{ margin-bottom:18px; color:var(--ink-soft); font-size:16px; }
+  .about .bio p:last-child{ margin-bottom:0; }
+  .cred-list{ margin-top:32px; border-top:1px solid var(--line); }
+  .cred-row{ display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--line); font-size:15px; }
+  .cred-row .k{ color:var(--ink-soft); }
+  .cred-row .v{ font-weight:500; text-align:right; }
+
+  /* ---------- Services ---------- */
+  .services{ background:var(--bg-mint); }
+  .services-head{ max-width:640px; margin-bottom:52px; }
+  .services-head h2{ font-size:34px; margin-bottom:18px; }
+  .services-head p{ color:var(--ink-soft); font-size:16.5px; }
+  .ledger{ border-top:1px solid var(--line); }
+  .ledger-row{ border-bottom:1px solid var(--line); }
+  .ledger-row summary{
+    list-style:none; cursor:pointer; padding:26px 4px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .ledger-row summary::-webkit-details-marker{ display:none; }
+  .ledger-name{ font-family:var(--serif); font-size:21px; color:var(--primary-dark); }
+  .ledger-toggle{
+    flex:none; width:28px; height:28px; border-radius:50%; border:1px solid var(--accent);
+    position:relative;
+  }
+  .ledger-toggle::before, .ledger-toggle::after{
+    content:''; position:absolute; background:var(--accent); top:50%; left:50%;
+  }
+  .ledger-toggle::before{ width:12px; height:1.5px; transform:translate(-50%,-50%); }
+  .ledger-toggle::after{ width:1.5px; height:12px; transform:translate(-50%,-50%); transition:transform .2s ease; }
+  details[open] .ledger-toggle::after{ transform:translate(-50%,-50%) rotate(90deg); opacity:0; }
+  .ledger-list{ list-style:none; margin:0; padding:0 4px 30px; display:grid; grid-template-columns:1fr 1fr; gap:14px 40px; }
+  .ledger-list li{ font-size:15px; color:var(--ink-soft); }
+  .ledger-list li strong{ color:var(--ink); font-weight:600; }
+  .service-link{
+    display:flex; align-items:flex-start; gap:10px; text-decoration:none; color:inherit;
+    padding:8px; margin:-8px; border-radius:3px; transition:background-color .15s ease;
+  }
+  .service-link:hover{ background:var(--white); }
+  .service-link:hover strong{ color:var(--accent); }
+  .service-link .wa-ico{ width:17px; height:17px; flex:none; margin-top:2px; fill:var(--wa); }
+
+  /* ---------- Insights ---------- */
+  .insights .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+  .insights h2{ font-size:32px; margin-bottom:20px; }
+  .insights p.lede{ color:var(--ink-soft); font-size:16.5px; max-width:44ch; }
+  .topic-tags{ margin-top:28px; display:flex; flex-wrap:wrap; gap:10px; }
+  .topic-tags span{ border:1px solid var(--line); padding:8px 16px; font-size:14px; border-radius:2px; color:var(--ink-soft); }
+  .yt-preview{
+    display:block; text-decoration:none; color:inherit;
+    border:1px solid var(--line); background:var(--white); overflow:hidden;
+  }
+  .yt-thumb{
+    position:relative; aspect-ratio:16/9;
+    background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .yt-play{
+    width:78px; height:78px; border-radius:50%; background:rgba(255,255,255,.95);
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .15s ease;
+  }
+  .yt-preview:hover .yt-play{ transform:scale(1.06); }
+  .yt-meta{ padding:28px 30px 32px; }
+  .yt-meta .kicker{ font-size:13.5px; color:var(--accent); font-weight:500; }
+  .yt-meta h3{ font-size:24px; margin:12px 0 14px; }
+  .yt-meta p{ color:var(--ink-soft); font-size:15px; margin-bottom:18px; }
+  .yt-link-text{ font-size:14.5px; font-weight:600; color:var(--primary); }
+  .yt-preview:hover .yt-link-text{ color:var(--accent); }
+
+  /* ---------- Careers ---------- */
+  .careers{ background:var(--bg-mint); }
+  .careers .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
+  .careers h2{ font-size:32px; margin-bottom:20px; }
+  .careers p.lede{ color:var(--ink-soft); font-size:16.5px; max-width:44ch; }
+  .apply-card{ border:1px solid var(--line); background:var(--white); padding:34px; }
+  .apply-card .kicker{ font-size:13.5px; color:var(--accent); font-weight:500; }
+  .apply-card h3{ font-size:24px; margin:12px 0 14px; }
+  .apply-card p{ color:var(--ink-soft); font-size:15px; margin-bottom:22px; }
+  .apply-note{ display:block; margin-top:16px; font-size:13px; color:var(--ink-soft); }
+
+  /* ---------- Contact ---------- */
+  .contact{ background:var(--primary-dark); color:var(--accent-soft); }
+  .contact .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+  .contact h2{ color:var(--white); font-size:32px; margin-bottom:18px; }
+  .contact p.lede{ color:var(--accent-soft); font-size:16px; max-width:42ch; }
+  .contact-list{ margin-top:34px; border-top:1px solid rgba(241,230,204,.2); }
+  .contact-row{ padding:20px 0; border-bottom:1px solid rgba(241,230,204,.2); }
+  .contact-row .k{ font-size:12.5px; color:var(--accent); margin-bottom:6px; }
+  .contact-row .v{ font-size:16.5px; color:var(--white); text-decoration:none; display:block; }
+  .contact-row .v:hover{ color:var(--accent-soft); }
+  .map-frame{ border:1px solid rgba(241,230,204,.25); }
+  .map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; filter:grayscale(.15); }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--ink); color:var(--accent-soft); }
+  footer .wrap{ padding:32px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+  footer .foot-brand{ font-family:var(--serif); font-size:16px; color:var(--white); }
+  footer .foot-note{ font-size:13px; color:rgba(241,230,204,.65); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    section{ padding:64px 0; }
+    .wrap{ padding:0 22px; }
+    .nav{ padding:16px 22px; }
+    nav.links{ display:none; }
+    .hero .wrap{ grid-template-columns:1fr; gap:56px; }
+    .hero-copy h1{ font-size:38px; }
+    .hero-quote{ position:static; margin-top:24px; max-width:none; }
+    .strip .wrap{ grid-template-columns:1fr 1fr; }
+    .strip-item{ border-left:none; border-top:1px solid rgba(241,230,204,.18); padding:24px 0; }
+    .strip-item:nth-child(2){ border-left:1px solid rgba(241,230,204,.18); padding-left:24px; }
+    .strip-item:nth-child(4){ border-left:1px solid rgba(241,230,204,.18); padding-left:24px; }
+    .about .wrap{ grid-template-columns:1fr; gap:40px; }
+    .ledger-list{ grid-template-columns:1fr; }
+    .insights .wrap{ grid-template-columns:1fr; }
+    .careers .wrap{ grid-template-columns:1fr; }
+    .contact .wrap{ grid-template-columns:1fr; }
+    footer .wrap{ flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/logo.png" alt="M&amp;M Tax and Wealth Advisors logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="brand-mark" style="display:none" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="21" fill="#16233B"/>
+        <circle cx="22" cy="22" r="21" fill="none" stroke="#8A1F3B" stroke-width="1"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Fraunces, serif" font-size="16" fill="#F4E4E8">M&amp;M</text>
+      </svg>
+      <span class="brand-name">M&amp;M Tax and Wealth<small>Chartered Accountants, Gurgaon</small></span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#insights">Insights</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-call" href="tel:+919034569223">Call 90345 69223</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Clarity, compounded into every filing.</h1>
+        <p class="lede">CA Manisha Mittal advises companies and individuals on GST, income tax, corporate compliance and wealth planning, drawing on a decade spent leading indirect tax at Walmart, Yatra and Brookfield Properties.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Book a consultation</a>
+          <a class="btn btn-ghost" href="#services">See what we handle</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <div class="hero-photo-frame">
+          <img src="assets/manisha-mittal.jpg" alt="CA Manisha Mittal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="photo-placeholder" style="display:flex">
+            <div class="medallion">MM</div>
+            <span class="cap">Photograph of CA Manisha Mittal<br>to be added here</span>
+          </div>
+        </div>
+        <blockquote class="hero-quote">
+          "Simplifying complexities to empower your financial growth."
+          <cite>CA Manisha Mittal, Founder</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="strip-item">
+        <div class="num">10+ yrs</div>
+        <div class="lbl">leading indirect tax and GST advisory</div>
+      </div>
+      <div class="strip-item">
+        <div class="num">Walmart</div>
+        <div class="lbl">Yatra Online, DCM Shriram, Brookfield Properties</div>
+      </div>
+      <div class="strip-item">
+        <div class="num">13</div>
+        <div class="lbl">practice areas, from GST to crypto taxation</div>
+      </div>
+      <div class="strip-item">
+        <div class="num">B.Com, CA</div>
+        <div class="lbl">Chartered Accountant, Institute of Chartered Accountants of India</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div>
+        <h2>About Manisha</h2>
+        <div class="bio">
+          <p>Manisha is a Chartered Accountant and senior corporate indirect tax leader with over a decade of specialised experience across GST compliance, strategic advisory and corporate litigation. She has managed high-stakes financial portfolios and optimised indirect tax frameworks for major global and domestic enterprises spanning retail, e-commerce, manufacturing and real estate.</p>
+          <p>She has spearheaded critical tax operations at Walmart, driven digital travel tax compliance at Yatra Online Limited, managed complex corporate tax structures at DCM Shriram Ltd, where she was also selected for executive leadership mentoring, and led the indirect tax vertical at Brookfield Properties.</p>
+          <p>She now brings that corporate-side rigour directly to clients as founder of M&amp;M Tax and Wealth Advisors. Her expertise spans cross-functional tax planning, drafting definitive legal positions, and leading multi-state GST audits through India's post-GST transition — for founders and finance leaders who want one advisor across every filing, not a different specialist for each.</p>
+        </div>
+      </div>
+      <div>
+        <div class="cred-list">
+          <div class="cred-row"><span class="k">Education</span><span class="v">B.Com, Chartered Accountant (ICAI)</span></div>
+          <div class="cred-row"><span class="k">Current role</span><span class="v">Founder, M&amp;M Tax and Wealth Advisors</span></div>
+          <div class="cred-row"><span class="k">Prior experience</span><span class="v">Walmart, Yatra Online, DCM Shriram, Brookfield Properties</span></div>
+          <div class="cred-row"><span class="k">Sectors</span><span class="v">Retail, e-commerce, manufacturing, real estate</span></div>
+          <div class="cred-row"><span class="k">Firm</span><span class="v">M&amp;M Tax and Wealth Advisors, Gurgaon</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="services-head">
+        <h2>What we handle</h2>
+        <p>Thirteen practice areas, run by one team. Open a category to see exactly what's included — from a monthly GSTR-3B to a cross-border transfer pricing filing.</p>
+      </div>
+
+      <div class="ledger">
+
+        <details class="ledger-row" open>
+          <summary><span class="ledger-name">GST compliance &amp; advisory</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="End-to-end compliance management"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>End-to-end compliance management.</strong> Monthly, quarterly and annual GST returns — GSTR-1, 3B, 4 — filed with zero errors.</a></li>
+            <li><a class="service-link" href="#" data-service="Annual GST audits"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Annual GST audits.</strong> Compiling and filing annual returns and reconciliation statements under GSTR-9 and GSTR-9C.</a></li>
+            <li><a class="service-link" href="#" data-service="Departmental notice solutions"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Departmental notice solutions.</strong> Drafting watertight replies to GST notices, managing scrutiny and leading assessments.</a></li>
+            <li><a class="service-link" href="#" data-service="Refunds and registrations"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Refunds and registrations.</strong> Swift GST refund filing, export claims and seamless multi-state new registrations.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Income tax &amp; tax planning</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Strategic salary tax planning"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Strategic salary tax planning.</strong> Optimising personal salary structures to legal limits to minimise income tax liability.</a></li>
+            <li><a class="service-link" href="#" data-service="Capital gains optimisation"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Capital gains optimisation.</strong> Advisory on capital gains from property, shares and mutual funds.</a></li>
+            <li><a class="service-link" href="#" data-service="Business ITR &amp; compliance"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Business ITR &amp; compliance.</strong> Preparation, computation and filing of complex business income tax returns.</a></li>
+            <li><a class="service-link" href="#" data-service="Trust &amp; society taxation"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Trust &amp; society taxation.</strong> Exemption registration and compliance tracking for NGOs and trusts.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Wealth management &amp; advisory</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Custom financial planning"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Custom financial planning.</strong> Personalised, goal-based blueprints for sustainable wealth accumulation.</a></li>
+            <li><a class="service-link" href="#" data-service="Investment portfolio advisory"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Investment portfolio advisory.</strong> Independent analysis and performance tracking of mutual fund investments.</a></li>
+            <li><a class="service-link" href="#" data-service="Retirement &amp; estate management"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Retirement &amp; estate management.</strong> Long-term retirement timelines built toward financial independence.</a></li>
+            <li><a class="service-link" href="#" data-service="Risk &amp; insurance planning"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Risk &amp; insurance planning.</strong> Assessing risk profiles to recommend life and health cover.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Corporate &amp; business services</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="New company incorporation"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>New company incorporation.</strong> Private Limited, LLP and OPC registrations with the Ministry of Corporate Affairs.</a></li>
+            <li><a class="service-link" href="#" data-service="Annual ROC compliance"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Annual ROC compliance.</strong> Board resolutions, annual forms and mandatory ROC filings.</a></li>
+            <li><a class="service-link" href="#" data-service="Startup India recognition"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Startup India recognition.</strong> Securing DPIIT certificates to unlock tax holidays and government benefits.</a></li>
+            <li><a class="service-link" href="#" data-service="MSME &amp; government registration"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>MSME &amp; government registration.</strong> Fast-tracked MSME/Udyam registration for credit access and subsidies.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Auditing &amp; assurance</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Statutory audits"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Statutory audits.</strong> Independent examination of corporate financial records for regulatory compliance.</a></li>
+            <li><a class="service-link" href="#" data-service="Internal risk audits"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Internal risk audits.</strong> Reviewing internal controls to detect leakages and improve efficiency.</a></li>
+            <li><a class="service-link" href="#" data-service="Income tax audits"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Income tax audits.</strong> Mandated tax audits under Section 44AB ahead of filing deadlines.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Loan &amp; corporate financing</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Project finance &amp; term loans"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Project finance &amp; term loans.</strong> Detailed project reports and funding for capital-intensive expansion.</a></li>
+            <li><a class="service-link" href="#" data-service="Working capital &amp; CC limits"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Working capital &amp; CC limits.</strong> Cash credit limits, bank guarantees and overdraft facilities.</a></li>
+            <li><a class="service-link" href="#" data-service="MSME &amp; business loans"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>MSME &amp; business loans.</strong> Collateral-free loans and subsidised government funding for small enterprises.</a></li>
+            <li><a class="service-link" href="#" data-service="Home &amp; property loans"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Home &amp; property loans.</strong> Documentation for loans against property and residential home loans.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Trademark &amp; MSME services</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Trademark registration"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Trademark registration.</strong> Brand availability searches and filing official trademark applications.</a></li>
+            <li><a class="service-link" href="#" data-service="Objection &amp; opposition handling"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Objection &amp; opposition handling.</strong> Drafting responses and representing clients in show-cause hearings.</a></li>
+            <li><a class="service-link" href="#" data-service="MSME / Udyam registration"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>MSME / Udyam registration.</strong> Certificates enabling priority lending and lower interest rates.</a></li>
+            <li><a class="service-link" href="#" data-service="Government subsidy advisory"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Government subsidy advisory.</strong> Identifying eligible subsidies, tender preferences and payment protections.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">NRI taxation &amp; remittances</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="NRI tax return filing"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>NRI tax return filing.</strong> Indian income tax returns for non-resident Indians with local income or assets.</a></li>
+            <li><a class="service-link" href="#" data-service="Form 15CA &amp; 15CB certification"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Form 15CA &amp; 15CB certification.</strong> CA certificates for outward foreign fund remittances.</a></li>
+            <li><a class="service-link" href="#" data-service="DTAA benefit advisory"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>DTAA benefit advisory.</strong> Structuring cross-border earnings to claim treaty tax credits.</a></li>
+            <li><a class="service-link" href="#" data-service="FEMA compliance &amp; setup"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>FEMA compliance &amp; setup.</strong> Guidance on inward investment, NRE/NRO accounts and exchange law.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Virtual CFO &amp; growth advisory</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Outsourced CFO services"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Outsourced CFO services.</strong> Strategic financial leadership, cash flow and profitability advisory.</a></li>
+            <li><a class="service-link" href="#" data-service="Advanced MIS reporting"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Advanced MIS reporting.</strong> Monthly performance dashboards for financial clarity.</a></li>
+            <li><a class="service-link" href="#" data-service="Budgeting &amp; variance analysis"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Budgeting &amp; variance analysis.</strong> Operational budgets tracked monthly against actuals.</a></li>
+            <li><a class="service-link" href="#" data-service="Cost optimisation checks"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Cost optimisation checks.</strong> Controls that plug leakages and improve working capital cycles.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">International tax &amp; transfer pricing</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Transfer pricing audits"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Transfer pricing audits.</strong> Form 3CEB filings and local documentation to comply with regulations.</a></li>
+            <li><a class="service-link" href="#" data-service="Cross-border transaction taxing"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Cross-border transaction taxing.</strong> Advisory on withholding tax, royalties and expatriate tax planning.</a></li>
+            <li><a class="service-link" href="#" data-service="BEPS &amp; POEM advisory"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>BEPS &amp; POEM advisory.</strong> Navigating base erosion and place-of-effective-management rules.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Payroll &amp; labour compliance</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="End-to-end payroll processing"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>End-to-end payroll processing.</strong> Salary computation, payslips and tax-efficient CTC models.</a></li>
+            <li><a class="service-link" href="#" data-service="PF &amp; ESI management"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>PF &amp; ESI management.</strong> Monthly deposits, employee registration and timely return filing.</a></li>
+            <li><a class="service-link" href="#" data-service="Labour law filings"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Labour law filings.</strong> Computing liabilities for gratuity, bonuses and statutory compliance.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Startup valuation &amp; fundraising</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Business valuation certificates"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Business valuation certificates.</strong> Reports using discounted cash flow and net asset methods.</a></li>
+            <li><a class="service-link" href="#" data-service="Financial projection modelling"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Financial projection modelling.</strong> Five-year models built for investor scrutiny.</a></li>
+            <li><a class="service-link" href="#" data-service="Investor due diligence readiness"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Investor due diligence readiness.</strong> Structuring records for a seamless due diligence process.</a></li>
+          </ul>
+        </details>
+
+        <details class="ledger-row">
+          <summary><span class="ledger-name">Digital assets &amp; crypto taxation</span><span class="ledger-toggle"></span></summary>
+          <ul class="ledger-list">
+            <li><a class="service-link" href="#" data-service="Crypto &amp; VDA tax filing"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Crypto &amp; VDA tax filing.</strong> Computing and filing tax on virtual digital assets, NFTs and staking income.</a></li>
+            <li><a class="service-link" href="#" data-service="TDS on crypto transactions"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>TDS on crypto transactions.</strong> Guidance on the 1% TDS rule under Section 194S.</a></li>
+            <li><a class="service-link" href="#" data-service="Portfolio advisory"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.36 2 11.7c0 1.9.55 3.68 1.5 5.2L2 22l5.28-1.44a10.2 10.2 0 0 0 4.72 1.15c5.52 0 10-4.36 10-9.7C22 6.36 17.52 2 12 2zm0 17.6c-1.5 0-2.9-.4-4.1-1.1l-.3-.17-3.13.85.85-2.95-.2-.3A7.86 7.86 0 0 1 4 11.7C4 7.46 7.6 4 12 4s8 3.46 8 7.7-3.6 7.9-8 7.9zm4.4-5.9c-.24-.12-1.42-.68-1.64-.76-.22-.08-.38-.12-.54.12-.16.24-.62.76-.76.92-.14.16-.28.18-.52.06-.24-.12-1-.36-1.9-1.15-.7-.6-1.18-1.35-1.32-1.58-.14-.24-.02-.36.1-.48.1-.1.24-.26.36-.4.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.28-.74-1.76-.2-.46-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.8-.84 1.96s.86 2.28.98 2.44c.12.16 1.7 2.6 4.14 3.64.58.25 1.03.4 1.38.5.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg><strong>Portfolio advisory.</strong> Tax implications of high-volume digital asset holdings for HNIs.</a></li>
+          </ul>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="insights" id="insights">
+    <div class="wrap">
+      <div>
+        <h2>Reading and watching</h2>
+        <p class="lede">Manisha writes and records on the subjects clients ask about most — GST changes, financial freedom, and the fine print of Indian tax law.</p>
+        <div class="topic-tags">
+          <span>Taxation</span>
+          <span>Financial freedom</span>
+          <span>GST</span>
+        </div>
+      </div>
+      <a class="yt-preview" href="https://www.youtube.com/@caabhinavmanchanda" target="_blank" rel="noopener">
+        <div class="yt-thumb">
+          <span class="yt-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="52" height="37"><path d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.8 0 34 0 34 0S12.2 0 7.3 1.9c-2.9.8-5 2.9-5.8 5.8C0 12.6 0 24 0 24s0 11.4 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.2 48 34 48 34 48s21.8 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 35.4 68 24 68 24s0-11.4-1.5-16.3z" fill="#212121"/><path d="M45 24 27 14v20z" fill="#fff"/></svg>
+          </span>
+        </div>
+        <div class="yt-meta">
+          <div class="kicker">On YouTube</div>
+          <h3>GST and tax explainers</h3>
+          <p>Short, practical videos breaking down GST filings, income tax rules and money decisions for founders and individuals.</p>
+          <span class="yt-link-text">Watch the channel</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="careers" id="careers">
+    <div class="wrap">
+      <div>
+        <h2>Careers at M&amp;M</h2>
+        <p class="lede">We take on articled trainees, GST associates and tax analysts as the practice grows. If you're precise with numbers and want to learn indirect tax from the ground up, we'd like to hear from you.</p>
+        <div class="topic-tags">
+          <span>Articleship (CA)</span>
+          <span>GST associate</span>
+          <span>Tax analyst</span>
+          <span>Client servicing</span>
+        </div>
+      </div>
+      <div class="apply-card">
+        <div class="kicker">Open to applications</div>
+        <h3>Send us your resume</h3>
+        <p>Email your resume along with the role you're interested in. We review every application and respond to shortlisted candidates within a week.</p>
+        <a class="btn btn-primary" href="mailto:mmtaxandwealth@gmail.com?subject=Job%20Application%20-%20M%26M%20Tax%20and%20Wealth%20Advisors&body=Hi%20Manisha%2C%0D%0A%0D%0AI%27d%20like%20to%20apply%20for%20a%20role%20at%20M%26M%20Tax%20and%20Wealth%20Advisors.%0D%0A%0D%0ARole%20I%27m%20interested%20in%3A%20%0D%0ARelevant%20experience%3A%20%0D%0A%0D%0APlease%20find%20my%20resume%20attached.">Email your resume</a>
+        <span class="apply-note">Attach your resume before sending — this opens your email app with the details pre-filled.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Get in touch</h2>
+        <p class="lede">Send a note or call the office directly — Manisha and the team typically respond within one business day.</p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <div class="k">Office</div>
+            <a class="v" href="https://maps.google.com/?q=92VH+HRW,+Sector+70,+Gurugram,+Haryana+122101" target="_blank" rel="noopener">M&amp;M Tax and Wealth Advisors, Sector 69, Gurgaon 122101</a>
+          </div>
+          <div class="contact-row">
+            <div class="k">Phone</div>
+            <a class="v" href="tel:+919034569223">+91 90345 69223</a>
+          </div>
+          <div class="contact-row">
+            <div class="k">Email</div>
+            <a class="v" href="mailto:mmtaxandwealth@gmail.com">mmtaxandwealth@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=92VH%2BHRW%2C%20Sector%2070%2C%20Gurugram%2C%20Haryana%20122101&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">M&amp;M Tax and Wealth Advisors</div>
+    <div class="foot-note">&copy; <span id="year"></span> M&amp;M Tax and Wealth Advisors. CA Manisha Mittal, Gurgaon.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var WHATSAPP_NUMBER = '919034569223';
+  document.querySelectorAll('.service-link').forEach(function(el){
+    var service = el.getAttribute('data-service');
+    var message = "Hi, I'd like to know more about your " + service + " service.";
+    el.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message));
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>
